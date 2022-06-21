@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'colours.dart';
+import 'responsive_layout.dart';
+import 'screens/all.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,14 +20,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         backgroundColor: backgroundColor,
       ),
-      home: Text(
-        'Hello Deon',
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-          fontStyle: FontStyle.italic,
-        ),
-      ),
+      home: const ResponsiveLayout(
+          mobileScreenLayout: MobileScreenLayout(),
+          webScreenLayout: WebScreenLayout()),
     );
   }
 }
