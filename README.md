@@ -1,2 +1,4 @@
-# W-AClone
-WhatsApp Clone using flutter
+# ChatAppClone
+WhatsApp Clone using flutter & Netlify
+
+## Installation
