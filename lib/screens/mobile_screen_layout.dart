@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../colours.dart';
+import '../widgets/contacts_list.dart';
 
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class MobileScreenLayout extends StatelessWidget {
             IconButton(
               color: Color.fromARGB(255, 138, 255, 239),
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.search,
                 // can add color
               ),
@@ -33,7 +34,7 @@ class MobileScreenLayout extends StatelessWidget {
             IconButton(
               color: Color.fromARGB(255, 138, 255, 239),
               onPressed: () {},
-              icon: Icon(Icons.more_vert),
+              icon: const Icon(Icons.more_vert),
               // can add color
             ),
           ],
@@ -58,16 +59,7 @@ class MobileScreenLayout extends StatelessWidget {
             ],
           ),
         ),
-        body: const Center(
-          child: Text(
-            'Hello Deon, this is mobile',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              fontStyle: FontStyle.italic,
-            ),
-          ),
-        ),
+        body: const ContactsList(),
       ),
     );
   }
