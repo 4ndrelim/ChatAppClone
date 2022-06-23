@@ -16,7 +16,7 @@ class MobileScreenLayout extends StatelessWidget {
           title: const Text(
             "WhatsApp",
             style: TextStyle(
-              color: Color.fromARGB(255, 138, 255, 239),
+              color: appBarTextColor,
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
@@ -24,7 +24,7 @@ class MobileScreenLayout extends StatelessWidget {
           centerTitle: false,
           actions: [
             IconButton(
-              color: Color.fromARGB(255, 138, 255, 239),
+              color: appBarTextColor,
               onPressed: () {},
               icon: const Icon(
                 Icons.search,
@@ -32,7 +32,7 @@ class MobileScreenLayout extends StatelessWidget {
               ),
             ),
             IconButton(
-              color: Color.fromARGB(255, 138, 255, 239),
+              color: appBarTextColor,
               onPressed: () {},
               icon: const Icon(Icons.more_vert),
               // can add color

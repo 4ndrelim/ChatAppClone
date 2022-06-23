@@ -12,7 +12,7 @@ class ResponsiveLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      // to change hardcoded value!
+      // ! to change hardcoded value!
       if (constraints.maxWidth > 900) {
         // Web layout
         return webScreenLayout;
