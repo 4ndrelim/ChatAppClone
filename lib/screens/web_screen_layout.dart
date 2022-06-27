@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/widgets/contacts_list.dart';
 import 'package:whatsapp_clone/widgets/web_profile_bar.dart';
+import '../widgets/web_search_bar.dart';
 
 class WebScreenLayout extends StatelessWidget {
   const WebScreenLayout({Key? key}) : super(key: key);
@@ -9,6 +10,7 @@ class WebScreenLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Row(
+      // What effect does the below have???
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Expanded(
@@ -19,7 +21,7 @@ class WebScreenLayout extends StatelessWidget {
               children: [
                 // TODO: web profile on top
                 WebProfileBar(),
-                // TODO: search bar
+                WebSearchBar(),
                 ContactsList(),
               ],
             ),
