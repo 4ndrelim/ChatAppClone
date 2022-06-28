@@ -20,7 +20,6 @@ class WebScreenLayout extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  // TODO: web profile on top
                   WebProfileBar(),
                   WebSearchBar(),
                   ContactsList(),

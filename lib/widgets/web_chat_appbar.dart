@@ -19,6 +19,7 @@ class WebChatAppBar extends StatelessWidget {
           Row(
             children: [
               CircleAvatar(
+                // responsive element reqbbv
                 backgroundImage: NetworkImage(info[0]['profilePic'].toString()),
                 radius: 30,
               ),
