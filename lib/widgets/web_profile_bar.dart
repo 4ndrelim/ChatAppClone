@@ -7,17 +7,19 @@ class WebProfileBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // customizable
       height: MediaQuery.of(context).size.height * 0.077,
+      // below no effect??
       width: MediaQuery.of(context).size.width * 0.25,
       padding: const EdgeInsets.all(10),
       decoration: const BoxDecoration(
-          border: Border(
-            right: BorderSide(
-              color: dividerColor,
-            ),
+        border: Border(
+          right: BorderSide(
+            color: dividerColor,
           ),
-          color: webAppBarColor // background color for profile bar
-          ),
+        ),
+        color: webAppBarColor, // background color for profile bar
+      ),
       child: Row(
         // interesting
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

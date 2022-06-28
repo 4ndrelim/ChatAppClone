@@ -8,3 +8,4 @@ const webAppBarColor = Color.fromRGBO(42, 47, 50, 1);
 
 // own colours
 const appBarTextColor = Color.fromARGB(255, 138, 255, 239);
+const searchBarColor = Color.fromARGB(255, 31, 40, 54);
