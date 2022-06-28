@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/widgets/contacts_list.dart';
 import 'package:whatsapp_clone/widgets/web_profile_bar.dart';
+import 'package:whatsapp_clone/widgets/web_search_bar.dart';
 
 class WebScreenLayout extends StatelessWidget {
   const WebScreenLayout({Key? key}) : super(key: key);
@@ -20,6 +21,7 @@ class WebScreenLayout extends StatelessWidget {
                 // TODO: web profile on top
                 WebProfileBar(),
                 // TODO: search bar
+                WebSearchBar(),
                 ContactsList(),
               ],
             ),
