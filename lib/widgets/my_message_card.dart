@@ -10,7 +10,7 @@ class MyMessageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.centerLeft,
+      alignment: Alignment.centerRight,
       // apply constraints on child
       child: ConstrainedBox(
         constraints: BoxConstraints(

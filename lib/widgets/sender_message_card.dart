@@ -10,7 +10,7 @@ class SenderMessageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.centerRight,
+      alignment: Alignment.centerLeft,
       // apply constraints on child
       child: ConstrainedBox(
         constraints: BoxConstraints(
@@ -21,7 +21,7 @@ class SenderMessageCard extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
-          color: messageColor,
+          color: senderMessageColor,
           margin: const EdgeInsets.symmetric(
             vertical: 5,
             horizontal: 15,
