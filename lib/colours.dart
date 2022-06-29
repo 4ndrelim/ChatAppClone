@@ -12,3 +12,4 @@ const appBarTextColor = Color.fromARGB(255, 138, 255, 239);
 const searchBarColor = Color.fromARGB(255, 31, 40, 54);
 const messageColor = Color.fromARGB(255, 58, 212, 11);
 const senderMessageColor = Color.fromARGB(255, 77, 79, 83);
+const mobileChatBoxColor = Color.fromARGB(255, 43, 44, 46);
