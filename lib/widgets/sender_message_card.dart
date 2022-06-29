@@ -1,16 +1,16 @@
+import 'package:whatsapp_clone/colours.dart';
 import 'package:flutter/material.dart';
-import '../colours.dart';
 
-class MyMessageCard extends StatelessWidget {
+class SenderMessageCard extends StatelessWidget {
   final String message;
   final String date;
-  const MyMessageCard({Key? key, required this.message, required this.date})
+  const SenderMessageCard({Key? key, required this.message, required this.date})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.centerLeft,
+      alignment: Alignment.centerRight,
       // apply constraints on child
       child: ConstrainedBox(
         constraints: BoxConstraints(
@@ -44,7 +44,7 @@ class MyMessageCard extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 4,
+                bottom: 2,
                 right: 10,
                 child: Row(
                   children: [

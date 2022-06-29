@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../info.dart';
 import 'my_message_card.dart';
+import 'sender_message_card.dart';
 
 class ChatList extends StatelessWidget {
   const ChatList({Key? key}) : super(key: key);
@@ -16,6 +17,9 @@ class ChatList extends StatelessWidget {
               date: messages[index]['time'].toString());
         }
         //senderMessage -> card
+        return SenderMessageCard(
+            message: messages[index]['text'].toString(),
+            date: messages[index]['time'].toString());
       },
     );
   }
