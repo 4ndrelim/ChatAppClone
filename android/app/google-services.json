@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "410917655865",
+    "project_id": "chatappclone-efe41",
+    "storage_bucket": "chatappclone-efe41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410917655865:android:d2628e3df04e6fd5f104e8",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410917655865-51bmn5t2u7g4p3vfssjv3rbrscdfmect.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUM5_15aLHuC4B7wJW-2xNFkLIA34NrNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410917655865-51bmn5t2u7g4p3vfssjv3rbrscdfmect.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

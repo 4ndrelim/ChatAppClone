@@ -52,22 +52,9 @@ class MobileChatScreen extends StatelessWidget {
               ),
               suffixIcon: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
-                    Icon(
-                      Icons.camera_alt,
-                      color: Colors.grey,
-                    ),
-                    Icon(
-                      Icons.attach_file,
-                      color: Colors.grey,
-                    ),
-                    Icon(
-                      Icons.money,
-                      color: Colors.grey,
-                    ),
-                  ],
+                child: Icon(
+                  Icons.send,
+                  color: Colors.grey,
                 ),
               ),
               hintText: "Type a message...",
