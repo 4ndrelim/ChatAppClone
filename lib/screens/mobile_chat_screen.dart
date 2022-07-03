@@ -40,6 +40,10 @@ class MobileChatScreen extends StatelessWidget {
           // Text input. Not resuing web's version
           // different layout form web's
           TextField(
+            // add multi-line for text field
+            keyboardType: TextInputType.multiline,
+            maxLines: null,
+
             decoration: InputDecoration(
               filled: true,
               fillColor: mobileChatBoxColor,
@@ -52,9 +56,32 @@ class MobileChatScreen extends StatelessWidget {
               ),
               suffixIcon: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Icon(
-                  Icons.send,
-                  color: Colors.grey,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisSize: MainAxisSize.min,
+                  children: const [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 2.0),
+                      child: Icon(
+                        Icons.send,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 2.0),
+                      child: Icon(
+                        Icons.camera_alt,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 2.0),
+                      child: Icon(
+                        Icons.attach_file,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               hintText: "Type a message...",
