@@ -5,7 +5,8 @@ import '../colours.dart';
 import '../widgets/chat_list.dart';
 
 class MobileChatScreen extends StatelessWidget {
-  const MobileChatScreen({Key? key}) : super(key: key);
+  final int userID;
+  const MobileChatScreen({Key? key, required this.userID}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class MobileChatScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: appBarColor,
         title: Text(
-          info[0]['name'].toString(),
+          info[userID]['name'].toString(),
         ),
         centerTitle: false,
         actions: [
@@ -33,9 +34,9 @@ class MobileChatScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Expanded(
+          Expanded(
             // Chat List
-            child: ChatList(),
+            child: ChatList(userID: userID),
           ),
           // Text input. Not resuing web's version
           // different layout form web's
