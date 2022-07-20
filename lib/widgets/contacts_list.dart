@@ -21,7 +21,7 @@ class ContactsList extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                        builder: (context) => MobileChatScreen(userID: index)),
+                        builder: (context) => ChatScreen(userID: index)),
                   );
                 },
                 child: Padding(

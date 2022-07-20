@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/chat_list.dart';
+import '../widgets/chat_texts.dart';
 import '../widgets/contacts_list.dart';
 import '../widgets/web_chat_appbar.dart';
 import '../widgets/web_profile_bar.dart';
@@ -45,7 +45,7 @@ class WebScreenLayout extends StatelessWidget {
                 WebChatAppBar(),
                 // Chat List
                 Expanded(
-                  child: ChatList(
+                  child: ChatTexts(
                     userID: 0,
                   ),
                 ),

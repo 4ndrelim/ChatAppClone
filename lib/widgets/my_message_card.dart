@@ -28,7 +28,6 @@ class MyMessageCard extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              // how does this children thingy work
               Padding(
                 padding: const EdgeInsets.only(
                   left: 10,

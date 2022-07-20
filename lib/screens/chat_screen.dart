@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../info.dart';
 import '../colours.dart';
-import '../widgets/chat_list.dart';
+import '../widgets/chat_texts.dart';
 
-class MobileChatScreen extends StatelessWidget {
+class ChatScreen extends StatelessWidget {
   final int userID;
-  const MobileChatScreen({Key? key, required this.userID}) : super(key: key);
+  const ChatScreen({Key? key, required this.userID}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class MobileChatScreen extends StatelessWidget {
         children: [
           Expanded(
             // Chat List
-            child: ChatList(userID: userID),
+            child: ChatTexts(userID: userID),
           ),
           // Text input. Not resuing web's version
           // different layout form web's

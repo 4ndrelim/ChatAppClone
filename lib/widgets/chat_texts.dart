@@ -3,12 +3,13 @@ import '../info.dart';
 import 'my_message_card.dart';
 import 'sender_message_card.dart';
 
-class ChatList extends StatelessWidget {
+class ChatTexts extends StatelessWidget {
   final int userID;
-  const ChatList({Key? key, required this.userID}) : super(key: key);
+  const ChatTexts({Key? key, required this.userID}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // NOTE THAT <messages> is hardcoded in info.dart
     return ListView.builder(
       itemCount: messages[userID].length,
       itemBuilder: (context, index) {
