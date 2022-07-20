@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/widgets/chat_list.dart';
-import 'package:whatsapp_clone/widgets/contacts_list.dart';
-import 'package:whatsapp_clone/widgets/web_chat_appbar.dart';
-import 'package:whatsapp_clone/widgets/web_profile_bar.dart';
-import 'package:whatsapp_clone/colours.dart';
+import '../widgets/chat_list.dart';
+import '../widgets/contacts_list.dart';
+import '../widgets/web_chat_appbar.dart';
+import '../widgets/web_profile_bar.dart';
+import '../colours.dart';
 import '../widgets/web_search_bar.dart';
 
 class WebScreenLayout extends StatelessWidget {
@@ -65,12 +65,12 @@ class WebScreenLayout extends StatelessWidget {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.emoji_emotions_outlined),
+                        icon: const Icon(Icons.emoji_emotions_outlined),
                         color: Colors.grey,
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.attach_file),
+                        icon: const Icon(Icons.attach_file),
                         color: Colors.grey,
                       ),
                       // ! Important to add Expanded for TextField !
@@ -101,7 +101,12 @@ class WebScreenLayout extends StatelessWidget {
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.mic),
+                        icon: const Icon(Icons.send),
+                        color: Colors.grey,
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.mic),
                         color: Colors.grey,
                       ),
                     ],
