@@ -13,12 +13,15 @@ class MobileScreenLayout extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: appBarColor,
           elevation: 0,
-          title: const Text(
-            "WhatsApp",
-            style: TextStyle(
-              color: appBarTextColor,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+          title: const Padding(
+            padding: EdgeInsets.fromLTRB(42.0, 12.0, 0, 0),
+            child: Text(
+              "MyApp",
+              style: TextStyle(
+                color: appBarTextColor,
+                fontSize: 28,
+                fontWeight: FontWeight.w900,
+              ),
             ),
           ),
           centerTitle: false,
