@@ -48,7 +48,7 @@ class ChatScreen extends StatelessWidget {
               filled: true,
               fillColor: mobileChatBoxColor,
               prefixIcon: const Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Icon(
                   Icons.emoji_emotions,
                   color: Colors.grey,

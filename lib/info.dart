@@ -3,64 +3,55 @@ const info = [
     'name': 'Reinard',
     'message': 'Hi, wru?',
     'time': '3:53 pm',
-    'profilePic':
-        'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg',
+    'profilePic': 'images/reinard.jpeg',
   },
   {
     'name': 'andre',
     'message': 'Heyy, lima_dingdong here!',
     'time': '2:25 pm',
-    'profilePic':
-        'https://www.socialketchup.in/wp-content/uploads/2020/05/fi-vill-JOHN-DOE.jpg',
+    'profilePic': 'images/dingdong.jpg',
   },
   {
     'name': 'claudeon',
     'message': 'i m sleepy so gdnite.',
     'time': '1:03 pm',
-    'profilePic':
-        'https://media.cntraveler.com/photos/60596b398f4452dac88c59f8/16:9/w_3999,h_2249,c_limit/MtFuji-GettyImages-959111140.jpg',
+    'profilePic': 'images/claudeon.jpeg',
   },
   {
     'name': 'Ramon',
     'message': 'I have a mala superiority complex.',
     'time': '12:06 pm',
-    'profilePic':
-        'https://pbs.twimg.com/profile_images/1419974913260232732/Cy_CUavB.jpg',
+    'profilePic': 'images/ramon.jpeg',
   },
   {
     'name': 'Saadaas',
     'message': 'I\'m a palindrome and follow me on IG -> saadaas_destroyer',
     'time': '10:00 am',
-    'profilePic':
-        'https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?auto=compress%2Cformat&ixlib=php-3.3.0',
+    'profilePic': 'images/saad.jpeg',
   },
   {
     'name': 'Ara-Ara-San',
     'message': 'Who is she?',
     'time': '4:53 am',
-    'profilePic':
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+    'profilePic': 'images/scary.jpg',
   },
   {
     'name': 'WrewDon',
     'message': 'Wen fite day?',
     'time': '1:25 am',
-    'profilePic':
-        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+    'profilePic': 'images/wrew.jpg',
   },
   {
     'name': 'TMcDullI',
     'message': 'Check out my github page',
     'time': '3:31 pm',
-    'profilePic':
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+    'profilePic': 'images/dull.jpeg',
   },
   {
     'name': 'Kent_HO_O',
     'message': 'Ok, lets code!',
     'time': '3:26 pm',
-    'profilePic':
-        'https://images.unsplash.com/photo-1619194617062-5a61b9c6a049?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJhbmRvbSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+    'profilePic': 'images/kent.jpeg',
   },
 ];
 

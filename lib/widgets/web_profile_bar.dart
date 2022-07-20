@@ -26,7 +26,7 @@ class WebProfileBar extends StatelessWidget {
         children: [
           const CircleAvatar(
             backgroundImage: NetworkImage(
-                'https://commons.wikimedia.org/wiki/File:Cat_Meme.jpg'),
+                'https://miro.medium.com/max/1400/1*2bjwCLaA8TfH40OXcyLNvA.png'),
             radius: 20,
           ),
           Row(

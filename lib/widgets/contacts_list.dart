@@ -30,7 +30,7 @@ class ContactsList extends StatelessWidget {
                   child: ListTile(
                     // tiles containing user avatars and messages
                     leading: CircleAvatar(
-                      backgroundImage: NetworkImage(
+                      backgroundImage: AssetImage(
                         info[index]['profilePic'].toString(),
                       ),
                       radius: 30,
