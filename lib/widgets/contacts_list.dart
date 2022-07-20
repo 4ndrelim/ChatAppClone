@@ -37,6 +37,7 @@ class ContactsList extends StatelessWidget {
                     ),
                     title: Text(
                       // * users' names
+                      overflow: TextOverflow.ellipsis,
                       info[index]['name'].toString(),
                       style: const TextStyle(
                         fontSize: 18,
@@ -46,6 +47,7 @@ class ContactsList extends StatelessWidget {
                       // * last message sent/received
                       padding: const EdgeInsets.only(top: 6),
                       child: Text(
+                        overflow: TextOverflow.ellipsis,
                         info[index]['message'].toString(),
                         style: const TextStyle(
                           fontSize: 15,
