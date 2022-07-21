@@ -1,3 +1,6 @@
+import 'dart:developer';
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import '../info.dart';
 import '../colours.dart';
@@ -12,8 +15,18 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: appBarColor,
-        title: Text(
-          info[userID]['name'].toString(),
+        title: Row(
+          children: [
+            CircleAvatar(
+              backgroundImage:
+                  AssetImage(info[userID]['profilePic'].toString()),
+              radius: 22,
+            ),
+            const SizedBox(width: 14),
+            Text(
+              info[userID]['name'].toString(),
+            ),
+          ],
         ),
         centerTitle: false,
         actions: [
