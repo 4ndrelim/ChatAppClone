@@ -25,7 +25,7 @@ const info = [
   },
   {
     'name': 'Saadaas',
-    'message': 'I\'m a palindrome and follow me on IG -> saadaas_destroyer',
+    'message': 'I\'m a palindrome but they call me saadaas_destroyer',
     'time': '10:00 am',
     'profilePic': 'images/saad.jpeg',
   },
