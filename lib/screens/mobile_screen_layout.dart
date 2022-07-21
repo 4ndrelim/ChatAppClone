@@ -13,19 +13,31 @@ class MobileScreenLayout extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: appBarColor,
           elevation: 0,
-          title: const Padding(
-            padding: EdgeInsets.fromLTRB(42.0, 12.0, 0, 0),
-            child: Text(
-              "MyApp",
-              style: TextStyle(
-                color: appBarTextColor,
-                fontSize: 28,
-                fontWeight: FontWeight.w900,
-              ),
+          title: Padding(
+            padding: const EdgeInsets.fromLTRB(42.0, 16.0, 0.0, 0.0),
+            child: Row(
+              children: const [
+                Text(
+                  "MyApp",
+                  style: TextStyle(
+                    color: appBarTextColor,
+                    fontSize: 28,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ],
             ),
           ),
           centerTitle: false,
           actions: [
+            const Padding(
+              padding: EdgeInsets.fromLTRB(0.0, 16.0, 12.0, 0.0),
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    'https://miro.medium.com/max/1400/1*2bjwCLaA8TfH40OXcyLNvA.png'),
+                radius: 24,
+              ),
+            ),
             IconButton(
               color: appBarTextColor,
               onPressed: () {},

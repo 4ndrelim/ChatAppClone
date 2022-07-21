@@ -19,7 +19,7 @@ const info = [
   },
   {
     'name': 'Ramon',
-    'message': 'I have a mala superiority complex.',
+    'message': 'I just have a mala superiority complex.',
     'time': '12:06 pm',
     'profilePic': 'images/ramon.jpeg',
   },
@@ -115,7 +115,7 @@ const messages = [
     {"isMe": false, "text": "no im not", "time": "12:06 pm"},
     {
       "isMe": false,
-      "text": "I have a mala superiority complex.",
+      "text": "I just have a mala superiority complex.",
       "time": "12:06 pm"
     },
   ],
@@ -123,7 +123,7 @@ const messages = [
     {"isMe": true, "text": "waddup, Ninjaboi here", "time": "9:58 am"},
     {
       "isMe": false,
-      "text": "I'm a palindrome and follow me on IG -> saadaas_destroyer",
+      "text": "I'm a palindrome but they call me saadaas_destroyer",
       "time": "10:00 am"
     },
   ],
