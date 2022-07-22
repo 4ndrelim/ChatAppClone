@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../colours.dart';
+import '../styles.dart';
 
 class WebProfileBar extends StatelessWidget {
   const WebProfileBar({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class WebProfileBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // customizable
-      height: MediaQuery.of(context).size.height * 0.077,
+      height: MediaQuery.of(context).size.height * barheightfactor,
       // below no effect??
       width: MediaQuery.of(context).size.width * 0.25,
       padding: const EdgeInsets.all(10),

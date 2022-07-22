@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../colours.dart';
 import '../info.dart';
+import '../styles.dart';
 
 class WebChatAppBar extends StatelessWidget {
   final int userID;
@@ -9,7 +10,7 @@ class WebChatAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.077,
+      height: MediaQuery.of(context).size.height * barheightfactor,
       width: MediaQuery.of(context).size.width * 0.75,
       padding: const EdgeInsets.all(10),
       color: webAppBarColor,

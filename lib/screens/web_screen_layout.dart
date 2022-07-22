@@ -38,7 +38,7 @@ class WebScreenLayoutState extends State<WebScreenLayout> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            // ! expands [ContactList] so that it fills the remaining 1/4 of the screen
+            // ! expands so that it fills the remaining 1/4 of the screen
             // * scroll view
             child: SingleChildScrollView(
               child: Column(
@@ -119,7 +119,6 @@ class WebScreenLayoutState extends State<WebScreenLayout> {
               ),
             ),
           ),
-          // TODO: message screen
           Container(
             width: MediaQuery.of(context).size.width *
                 0.75, // ! three-quarters of screen is taken up by message widget
