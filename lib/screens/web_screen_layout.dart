@@ -5,9 +5,23 @@ import '../widgets/web_chat_appbar.dart';
 import '../widgets/web_profile_bar.dart';
 import '../colours.dart';
 import '../widgets/web_search_bar.dart';
+import '../info.dart';
 
-class WebScreenLayout extends StatelessWidget {
+class WebScreenLayout extends StatefulWidget {
   const WebScreenLayout({Key? key}) : super(key: key);
+
+  @override
+  State<WebScreenLayout> createState() => WebScreenLayoutState();
+}
+
+class WebScreenLayoutState extends State<WebScreenLayout> {
+  int _uid = 0;
+
+  void changeUID(int newUID) {
+    setState(() {
+      _uid = newUID;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +38,68 @@ class WebScreenLayout extends StatelessWidget {
                 children: [
                   WebProfileBar(),
                   WebSearchBar(),
-                  ContactsList(),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: info.length,
+                      itemBuilder: (context, index) {
+                        return Column(
+                          children: [
+                            InkWell(
+                              // ! make shit appears to be clickable (touch ripples)
+                              onTap: () {
+                                changeUID(index);
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 8.0, bottom: 8.0, right: 8.0),
+                                child: ListTile(
+                                  // tiles containing user avatars and messages
+                                  leading: CircleAvatar(
+                                    backgroundImage: AssetImage(
+                                      info[index]['profilePic'].toString(),
+                                    ),
+                                    radius: 30,
+                                  ),
+                                  title: Text(
+                                    // * users' names
+                                    overflow: TextOverflow.ellipsis,
+                                    info[index]['name'].toString(),
+                                    style: const TextStyle(
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                  subtitle: Padding(
+                                    // * last message sent/received
+                                    padding: const EdgeInsets.only(top: 6),
+                                    child: Text(
+                                      overflow: TextOverflow.ellipsis,
+                                      info[index]['message'].toString(),
+                                      style: const TextStyle(
+                                        fontSize: 15,
+                                      ),
+                                    ),
+                                  ),
+                                  trailing: Text(
+                                    info[index]['time'].toString(),
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const Divider(
+                              color: dividerColor,
+                              indent: 1,
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -42,11 +117,11 @@ class WebScreenLayout extends StatelessWidget {
             child: Column(
               children: [
                 // Chat App Bar
-                WebChatAppBar(),
+                WebChatAppBar(userID: _uid),
                 // Chat List
                 Expanded(
                   child: ChatTexts(
-                    userID: 0,
+                    userID: _uid,
                   ),
                 ),
                 // Message Input Box

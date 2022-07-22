@@ -3,7 +3,8 @@ import '../colours.dart';
 import '../info.dart';
 
 class WebChatAppBar extends StatelessWidget {
-  const WebChatAppBar({Key? key}) : super(key: key);
+  final int userID;
+  const WebChatAppBar({Key? key, required this.userID}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +20,15 @@ class WebChatAppBar extends StatelessWidget {
             children: [
               CircleAvatar(
                 // responsive element reqbbv
-                backgroundImage: AssetImage(info[0]['profilePic'].toString()),
+                backgroundImage:
+                    AssetImage(info[userID]['profilePic'].toString()),
                 radius: 30,
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.01,
               ),
               Text(
-                info[0]['name'].toString(),
+                info[userID]['name'].toString(),
                 style: const TextStyle(fontSize: 18),
               ),
             ],
