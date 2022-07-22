@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../widgets/chat_texts.dart';
-import '../widgets/contacts_list.dart';
 import '../widgets/web_chat_appbar.dart';
 import '../widgets/web_profile_bar.dart';
 import '../colours.dart';
 import '../widgets/web_search_bar.dart';
 import '../info.dart';
+import './chat_screen.dart';
 
 class WebScreenLayout extends StatefulWidget {
   const WebScreenLayout({Key? key}) : super(key: key);
@@ -16,6 +16,13 @@ class WebScreenLayout extends StatefulWidget {
 
 class WebScreenLayoutState extends State<WebScreenLayout> {
   int _uid = 0;
+
+  bool checkSameUID(int value) {
+    if (_uid == value) {
+      return true;
+    }
+    return false;
+  }
 
   void changeUID(int newUID) {
     setState(() {
@@ -49,7 +56,15 @@ class WebScreenLayoutState extends State<WebScreenLayout> {
                             InkWell(
                               // ! make shit appears to be clickable (touch ripples)
                               onTap: () {
-                                changeUID(index);
+                                if (checkSameUID(index)) {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ChatScreen(userID: index)),
+                                  );
+                                } else {
+                                  changeUID(index);
+                                }
                               },
                               child: Padding(
                                 padding: const EdgeInsets.only(

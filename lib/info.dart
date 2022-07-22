@@ -31,7 +31,7 @@ const info = [
   },
   {
     'name': 'Ara-Ara-San',
-    'message': 'Who is she?',
+    'message': 'who is she?',
     'time': '4:53 am',
     'profilePic': 'images/scary.jpg',
   },
@@ -134,7 +134,7 @@ const messages = [
     {"isMe": false, "text": "With who?", "time": "1:53 am"},
     {"isMe": true, "text": "gaming friends", "time": "2:36 am"},
     {"isMe": false, "text": "At where?", "time": "2:37 am"},
-    {"isMe": false, "text": "Who is she?", "time": "4:53 am"},
+    {"isMe": false, "text": "who is she?", "time": "4:53 am"},
   ],
   [
     {"isMe": true, "text": "Gym den trng tmr night?", "time": "4:36 pm"},
