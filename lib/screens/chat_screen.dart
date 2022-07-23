@@ -42,71 +42,78 @@ class ChatScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Expanded(
-            // Chat List
-            child: ChatTexts(userID: userID),
-          ),
-          // Text input. Not resuing web's version
-          // different layout form web's
-          TextField(
-            // add multi-line for text field
-            keyboardType: TextInputType.multiline,
-            maxLines: null,
-
-            decoration: InputDecoration(
-              filled: true,
-              fillColor: mobileChatBoxColor,
-              prefixIcon: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Icon(
-                  Icons.emoji_emotions,
-                  color: Colors.grey,
-                ),
-              ),
-              suffixIcon: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 2.0),
-                      child: Icon(
-                        Icons.send,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 2.0),
-                      child: Icon(
-                        Icons.camera_alt,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 2.0),
-                      child: Icon(
-                        Icons.attach_file,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              hintText: "Type a message...",
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: const BorderSide(
-                  width: 0,
-                  style: BorderStyle.none,
-                ),
-              ),
-              contentPadding: EdgeInsets.all(10),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              // Chat List
+              child: ChatTexts(userID: userID),
             ),
-          ),
-        ],
+            // Text input. Not resuing web's version
+            // different layout form web's
+            TextField(
+              style: const TextStyle(
+                fontSize: 20,
+              ),
+              // add multi-line for text field
+              keyboardType: TextInputType.multiline,
+              maxLines: null,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: mobileChatBoxColor,
+                prefixIcon: const Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 20,
+                  ),
+                  child: Icon(
+                    Icons.emoji_emotions,
+                    color: Colors.grey,
+                  ),
+                ),
+                suffixIcon: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 2.0),
+                        child: Icon(
+                          Icons.send,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 2.0),
+                        child: Icon(
+                          Icons.camera_alt,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 2.0),
+                        child: Icon(
+                          Icons.attach_file,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                hintText: "Type a message...",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: const BorderSide(
+                    width: 0,
+                    style: BorderStyle.none,
+                  ),
+                ),
+                contentPadding: const EdgeInsets.all(10),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

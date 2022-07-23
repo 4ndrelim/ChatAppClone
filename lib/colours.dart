@@ -8,9 +8,8 @@ const dividerColor = Color.fromARGB(255, 92, 92, 92);
 const webAppBarColor = Color.fromRGBO(42, 47, 50, 1);
 const chatBarMessage = Color.fromRGBO(30, 36, 40, 1);
 
-// own colours
 const appBarTextColor = Color.fromARGB(255, 255, 255, 255);
 const searchBarColor = Color.fromARGB(255, 31, 40, 54);
-const messageColor = Color.fromARGB(255, 101, 217, 66);
+const messageColor = Color.fromARGB(255, 0, 66, 50);
 const senderMessageColor = Color.fromARGB(255, 77, 79, 83);
 const mobileChatBoxColor = Color.fromARGB(255, 43, 44, 46);
