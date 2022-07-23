@@ -14,7 +14,7 @@ Back-end: Firebase / TBC (to be implemented.. )
 ### Web Home Screen
 **Note**: this layout is responsive, if the window is small, it transitions to mobile home screen's display.
 
-<img src = './product_showcase/web_home_screen.jpeg' alt='Mobile home screen display' width='450'>
+<img src = './product_showcase/web_home_screen.jpeg' alt='Mobile home screen display' width='500'>
 
 ### Chat Screen (Similar layout for both Mobile & Web)
 <img src = './product_showcase/mobile_chat_screen.jpeg' alt='Mobile home screen display' width='250'>
