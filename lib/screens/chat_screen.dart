@@ -1,6 +1,3 @@
-import 'dart:developer';
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import '../info.dart';
 import '../colours.dart';
