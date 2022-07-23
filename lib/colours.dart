@@ -2,6 +2,7 @@ import 'dart:ui';
 
 const backgroundColor = Color.fromRGBO(19, 28, 33, 1);
 const tabColor = Color.fromARGB(255, 255, 255, 255);
+const commentColor = Color.fromRGBO(0, 167, 131, 1);
 const appBarColor = Color.fromARGB(255, 35, 39, 42);
 const dividerColor = Color.fromARGB(255, 92, 92, 92);
 const webAppBarColor = Color.fromRGBO(42, 47, 50, 1);
