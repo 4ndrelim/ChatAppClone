@@ -9,18 +9,15 @@ Back-end: Firebase / TBC (to be implemented.. )
 
 ## Product Showcase
 ### Mobile Home Screen
-<img src = './product_showcase/mobile_home_screen.jpeg' alt='Mobile home screen display' width='200'>
-<br/><br/>
+<img src = './product_showcase/mobile_home_screen.jpeg' alt='Mobile home screen display' width='250'>
 
 ### Web Home Screen
 **Note**: this layout is responsive, if the window is small, it transitions to mobile home screen's display.
 
-<img src = './product_showcase/web_home_screen.jpeg' alt='Mobile home screen display' width='400'>
-<br/><br/>
+<img src = './product_showcase/web_home_screen.jpeg' alt='Mobile home screen display' width='450'>
 
 ### Chat Screen (Similar layout for both Mobile & Web)
-<img src = './product_showcase/mobile_chat_screen.jpeg' alt='Mobile home screen display' width='200'>
-<br/><br/>
+<img src = './product_showcase/mobile_chat_screen.jpeg' alt='Mobile home screen display' width='250'>
 
 ## Installation & Usage
 The front-end portion of this project can be used entirely and independently. Users can also implement their preferred backend framework for data storage & loading. A sample backend code *coming soon*!
