@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../info.dart';
 import '../colours.dart';
-import 'package:whatsapp_clone/screens/mobile_chat_screen.dart';
+import '../screens/chat_screen.dart';
 
 class ContactsList extends StatelessWidget {
   const ContactsList({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class ContactsList extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                        builder: (context) => const MobileChatScreen()),
+                        builder: (context) => ChatScreen(userID: index)),
                   );
                 },
                 child: Padding(
@@ -30,13 +30,14 @@ class ContactsList extends StatelessWidget {
                   child: ListTile(
                     // tiles containing user avatars and messages
                     leading: CircleAvatar(
-                      backgroundImage: NetworkImage(
+                      backgroundImage: AssetImage(
                         info[index]['profilePic'].toString(),
                       ),
                       radius: 30,
                     ),
                     title: Text(
                       // * users' names
+                      overflow: TextOverflow.ellipsis,
                       info[index]['name'].toString(),
                       style: const TextStyle(
                         fontSize: 18,
@@ -46,6 +47,7 @@ class ContactsList extends StatelessWidget {
                       // * last message sent/received
                       padding: const EdgeInsets.only(top: 6),
                       child: Text(
+                        overflow: TextOverflow.ellipsis,
                         info[index]['message'].toString(),
                         style: const TextStyle(
                           fontSize: 15,

@@ -14,6 +14,7 @@ class MyMessageCard extends StatelessWidget {
       // apply constraints on child
       child: ConstrainedBox(
         constraints: BoxConstraints(
+          minWidth: 140,
           maxWidth: MediaQuery.of(context).size.width - 45,
         ),
         child: Card(
@@ -28,7 +29,6 @@ class MyMessageCard extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              // how does this children thingy work
               Padding(
                 padding: const EdgeInsets.only(
                   left: 10,
@@ -38,7 +38,7 @@ class MyMessageCard extends StatelessWidget {
                 ),
                 child: Text(
                   message,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                   ),
                 ),

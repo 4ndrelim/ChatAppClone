@@ -1,13 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/widgets/chat_list.dart';
-import 'package:whatsapp_clone/widgets/contacts_list.dart';
-import 'package:whatsapp_clone/widgets/web_chat_appbar.dart';
-import 'package:whatsapp_clone/widgets/web_profile_bar.dart';
-import 'package:whatsapp_clone/colours.dart';
+import '../widgets/chat_texts.dart';
+import '../widgets/web_chat_appbar.dart';
+import '../widgets/web_profile_bar.dart';
+import '../colours.dart';
 import '../widgets/web_search_bar.dart';
+import '../info.dart';
+import './chat_screen.dart';
 
-class WebScreenLayout extends StatelessWidget {
+class WebScreenLayout extends StatefulWidget {
   const WebScreenLayout({Key? key}) : super(key: key);
+
+  @override
+  State<WebScreenLayout> createState() => WebScreenLayoutState();
+}
+
+class WebScreenLayoutState extends State<WebScreenLayout> {
+  int _uid = 0;
+
+  bool checkSameUID(int value) {
+    if (_uid == value) {
+      return true;
+    }
+    return false;
+  }
+
+  void changeUID(int newUID) {
+    setState(() {
+      _uid = newUID;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,19 +38,87 @@ class WebScreenLayout extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            // ! expands [ContactList] so that it fills the remaining 1/4 of the screen
+            // ! expands so that it fills the remaining 1/4 of the screen
             // * scroll view
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   WebProfileBar(),
                   WebSearchBar(),
-                  ContactsList(),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: info.length,
+                      itemBuilder: (context, index) {
+                        return Column(
+                          children: [
+                            InkWell(
+                              // ! make shit appears to be clickable (touch ripples)
+                              onTap: () {
+                                if (checkSameUID(index)) {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ChatScreen(userID: index)),
+                                  );
+                                } else {
+                                  changeUID(index);
+                                }
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 8.0, bottom: 8.0, right: 8.0),
+                                child: ListTile(
+                                  // tiles containing user avatars and messages
+                                  leading: CircleAvatar(
+                                    backgroundImage: AssetImage(
+                                      info[index]['profilePic'].toString(),
+                                    ),
+                                    radius: 30,
+                                  ),
+                                  title: Text(
+                                    // * users' names
+                                    overflow: TextOverflow.ellipsis,
+                                    info[index]['name'].toString(),
+                                    style: const TextStyle(
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                  subtitle: Padding(
+                                    // * last message sent/received
+                                    padding: const EdgeInsets.only(top: 6),
+                                    child: Text(
+                                      overflow: TextOverflow.ellipsis,
+                                      info[index]['message'].toString(),
+                                      style: const TextStyle(
+                                        fontSize: 15,
+                                      ),
+                                    ),
+                                  ),
+                                  trailing: Text(
+                                    info[index]['time'].toString(),
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const Divider(
+                              color: dividerColor,
+                              indent: 1,
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
           ),
-          // TODO: message screen
           Container(
             width: MediaQuery.of(context).size.width *
                 0.75, // ! three-quarters of screen is taken up by message widget
@@ -42,10 +131,12 @@ class WebScreenLayout extends StatelessWidget {
             child: Column(
               children: [
                 // Chat App Bar
-                WebChatAppBar(),
+                WebChatAppBar(userID: _uid),
                 // Chat List
                 Expanded(
-                  child: ChatList(),
+                  child: ChatTexts(
+                    userID: _uid,
+                  ),
                 ),
                 // Message Input Box
                 Container(
@@ -63,12 +154,12 @@ class WebScreenLayout extends StatelessWidget {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.emoji_emotions_outlined),
+                        icon: const Icon(Icons.emoji_emotions_outlined),
                         color: Colors.grey,
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.attach_file),
+                        icon: const Icon(Icons.attach_file),
                         color: Colors.grey,
                       ),
                       // ! Important to add Expanded for TextField !
@@ -99,7 +190,12 @@ class WebScreenLayout extends StatelessWidget {
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.mic),
+                        icon: const Icon(Icons.send),
+                        color: Colors.grey,
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.mic),
                         color: Colors.grey,
                       ),
                     ],

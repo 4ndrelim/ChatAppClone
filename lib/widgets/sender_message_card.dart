@@ -1,5 +1,5 @@
-import 'package:whatsapp_clone/colours.dart';
 import 'package:flutter/material.dart';
+import '../colours.dart';
 
 class SenderMessageCard extends StatelessWidget {
   final String message;
@@ -14,6 +14,7 @@ class SenderMessageCard extends StatelessWidget {
       // apply constraints on child
       child: ConstrainedBox(
         constraints: BoxConstraints(
+          minWidth: 140,
           maxWidth: MediaQuery.of(context).size.width - 45,
         ),
         child: Card(
@@ -38,7 +39,7 @@ class SenderMessageCard extends StatelessWidget {
                 ),
                 child: Text(
                   message,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                   ),
                 ),

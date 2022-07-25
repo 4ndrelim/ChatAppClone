@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:whatsapp_clone/colours.dart';
-import 'package:whatsapp_clone/info.dart';
+import '../colours.dart';
+import '../info.dart';
+import '../styles.dart';
 
 class WebChatAppBar extends StatelessWidget {
-  const WebChatAppBar({Key? key}) : super(key: key);
+  final int userID;
+  const WebChatAppBar({Key? key, required this.userID}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.077,
+      height: MediaQuery.of(context).size.height * barheightfactor,
       width: MediaQuery.of(context).size.width * 0.75,
       padding: const EdgeInsets.all(10),
       color: webAppBarColor,
@@ -20,15 +21,16 @@ class WebChatAppBar extends StatelessWidget {
             children: [
               CircleAvatar(
                 // responsive element reqbbv
-                backgroundImage: NetworkImage(info[0]['profilePic'].toString()),
+                backgroundImage:
+                    AssetImage(info[userID]['profilePic'].toString()),
                 radius: 30,
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.01,
               ),
               Text(
-                info[0]['name'].toString(),
-                style: TextStyle(fontSize: 18),
+                info[userID]['name'].toString(),
+                style: const TextStyle(fontSize: 18),
               ),
             ],
           ),

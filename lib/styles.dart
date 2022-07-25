@@ -7,6 +7,8 @@ const BodyTextSize = 16.0;
 
 const String FontNameDefault = 'Arial';
 
+const barheightfactor = 0.09;
+
 const AppBarTextStyle = TextStyle(
   fontFamily: FontNameDefault,
   fontWeight: FontWeight.w900,

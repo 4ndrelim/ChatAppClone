@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // removes banner on app
       debugShowCheckedModeBanner: false,
-      title: "Deon's & Andre's WhatsApp Clone",
+      title: "Deon's & Andre's App Clone",
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),

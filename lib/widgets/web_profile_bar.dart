@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/colours.dart';
+import '../colours.dart';
+import '../styles.dart';
 
 class WebProfileBar extends StatelessWidget {
   const WebProfileBar({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class WebProfileBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // customizable
-      height: MediaQuery.of(context).size.height * 0.077,
+      height: MediaQuery.of(context).size.height * barheightfactor,
       // below no effect??
       width: MediaQuery.of(context).size.width * 0.25,
       padding: const EdgeInsets.all(10),
@@ -26,7 +27,7 @@ class WebProfileBar extends StatelessWidget {
         children: [
           const CircleAvatar(
             backgroundImage: NetworkImage(
-                'https://commons.wikimedia.org/wiki/File:Cat_Meme.jpg'),
+                'https://miro.medium.com/max/1400/1*2bjwCLaA8TfH40OXcyLNvA.png'),
             radius: 20,
           ),
           Row(
