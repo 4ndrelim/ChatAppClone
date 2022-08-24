@@ -1,6 +1,6 @@
 # ChatAppClone
 
-This repository contains code for a responsive, albeit simplified, clone of a popular messaging app. Project was done with a friend while learning Flutter. See here for our full-stack IG [clone]()!.
+This repository contains code for a responsive, albeit simplified, clone of a popular messaging app. Project was done with a friend while learning Flutter. See here for our full-stack IG [clone](https://github.com/claudeonrs/instagram_clone)!
 
 ## Frameworks
 
